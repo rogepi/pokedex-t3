@@ -3,8 +3,8 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
-  url      = "file:./pokemon_wiki.db"
+  provider = "mysql"
+  url      = env("DATABASE_URL")
 }
 
 model pw_ability {
@@ -12,7 +12,7 @@ model pw_ability {
   nameZh     String   @default("")
   nameJa     String   @default("")
   nameEn     String   @default("")
-  effect     String   @default("")
+  effect     String   @default(dbgenerated("(_utf8mb4\\'\\')")) @db.Text
   generation Int      @default(0)
   createTime DateTime @default(now())
   modifyTime DateTime @default(now())
@@ -22,7 +22,7 @@ model pw_ability_detail {
   id         Int      @id @default(autoincrement())
   nameZh     String   @default("")
   desc       String   @default("")
-  effect     String   @default("")
+  effect     String   @default(dbgenerated("(_utf8mb4\\'\\')")) @db.Text
   pokemons   String   @default("")
   createTime DateTime @default(now())
   modifyTime DateTime @default(now())
