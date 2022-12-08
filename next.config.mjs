@@ -9,6 +9,13 @@
 const config = {
   reactStrictMode: true,
   swcMinify: true,
+  images:{
+    remotePatterns: [
+      {
+        hostname: "s1.52poke.wiki"
+      }
+    ]
+  },
   i18n: {
     locales: ["en"],
     defaultLocale: "en",
