@@ -29,7 +29,7 @@ const Home: NextPage = () => {
       {status === 'loading' ? <Loading /> : null}
       {hasNextPage ? (
         <button
-          className="my-8 text-white underline underline-offset-4  transition ease-in-out hover:translate-y-0.5  hover:text-[1.1rem] hover:text-[#e8ddff]"
+          className="my-8 mx-auto text-white underline underline-offset-4 transition ease-in-out hover:translate-y-0.5  hover:text-[1.1rem] hover:text-[#e8ddff]"
           onClick={() => fetchNextPage()}
         >
           加载更多

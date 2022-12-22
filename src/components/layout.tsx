@@ -12,12 +12,15 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       </Head>
       <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c]">
         <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16 ">
-          <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]">
-            Poké <span className="text-[hsl(280,100%,70%)]">dex</span>
-          </h1>
+          <Link href="/">
+            <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]">
+              Poké <span className="text-[hsl(280,100%,70%)]">dex</span>
+            </h1>
+          </Link>
         </div>
+        <div></div>
         {children}
-        <footer className="text-white">
+        <footer className="text-white mb-[2vh]">
           Pokédex power by
           <Link
             className="ml-2 font-bold text-[#e8ddff]"

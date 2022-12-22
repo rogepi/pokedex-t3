@@ -3,20 +3,11 @@ import { z } from 'zod'
 import { router, publicProcedure } from '../trpc'
 
 export const pokemonRouter = router({
-  hello: publicProcedure
-    .input(z.object({ text: z.string().nullish() }).nullish())
-    .query(({ input }) => {
-      return {
-        greeting: `Hello ${input?.text ?? 'world'}`,
+  getById: publicProcedure.input(z.number()).query(({ ctx, input }) => {
+    return ctx.prisma.pw_pokemon.findUnique({
+      where:{
+        id: input
       }
-    }),
-  getAll: publicProcedure.query(({ ctx }) => {
-    return ctx.prisma.pw_pokemon.findMany()
-  }),
-  getList: publicProcedure.input(z.number()).query(({ ctx, input }) => {
-    return ctx.prisma.pw_pokemon.findMany({
-      skip: (input - 1) * 20,
-      take: 20,
     })
   }),
   infinite: publicProcedure
