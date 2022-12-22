@@ -1,13 +1,15 @@
 {
-  "name": "template",
+  "name": "pokedex-t3",
   "version": "0.1.0",
+  "author": "rogepi",
   "private": true,
   "scripts": {
     "build": "next build",
     "dev": "next dev",
-    "postinstall": "prisma generate",
+    "start": "next start",
     "lint": "next lint",
-    "start": "next start"
+    "format": "prettier --write .",
+    "postinstall": "prisma generate"
   },
   "dependencies": {
     "@prisma/client": "^4.8.0",
