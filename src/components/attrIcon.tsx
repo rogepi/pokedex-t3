@@ -21,15 +21,15 @@ const attrColorMap = new Map([
   ['龙', 'f16e57'],
   ['恶', '707070'],
   ['妖精', 'fdb9e9'],
-
 ])
 
-export default function AttrIcon(props:IProps) {
-  return(
+export default function AttrIcon(props: IProps) {
+  return (
     <div>
-      <div className="w-12 h-5 text-sm md:text-base rounded-md flex justify-center items-center text-white" 
-        style={{backgroundColor:'#'+ attrColorMap.get(props.type)}} 
-       >
+      <div
+        className="flex h-5 w-12 items-center justify-center rounded-md text-sm text-white md:text-base"
+        style={{ backgroundColor: '#' + attrColorMap.get(props.type) }}
+      >
         {props.type}
       </div>
     </div>

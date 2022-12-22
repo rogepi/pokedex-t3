@@ -1,6 +1,6 @@
-import type { NextPage } from "next";
+import type { NextPage } from 'next'
 
-const Pokemon:NextPage =()=>{
+const Pokemon: NextPage = () => {
   return <div>pokemon</div>
 }
 

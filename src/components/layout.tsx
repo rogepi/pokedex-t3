@@ -1,6 +1,6 @@
-import Head from "next/head";
-import Link from "next/link";
-import React from "react";
+import Head from 'next/head'
+import Link from 'next/link'
+import React from 'react'
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -19,7 +19,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         {children}
         <footer className="text-white">
           Pokédex power by
-          <Link className="ml-2 font-bold text-[#e8ddff]" href={'https://create.t3.gg/'} target="_blank">
+          <Link
+            className="ml-2 font-bold text-[#e8ddff]"
+            href={'https://create.t3.gg/'}
+            target="_blank"
+          >
             T3 Stack
           </Link>
         </footer>
